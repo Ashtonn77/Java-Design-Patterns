@@ -1,4 +1,4 @@
-package com.observerpattern;
+package com.observerpattern.weatherapp;
 
 public class StatisticsDisplay implements Observer, DisplayElement{
 

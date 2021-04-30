@@ -1,4 +1,4 @@
-package com.observerpattern;
+package com.observerpattern.weatherapp;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement{
     
