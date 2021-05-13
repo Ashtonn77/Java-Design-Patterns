@@ -4,7 +4,7 @@ import java.time.LocalTime;
 
 public class LimitsDisplay implements Observer, DisplayElement{
     
-    float harddisk = 1000;
+    float hard_disk = 1000;
     float ram = 32;
     
     Subject softwareData;
@@ -19,17 +19,17 @@ public class LimitsDisplay implements Observer, DisplayElement{
     @Override
     public void display() {
 
-        System.out.println("\nRemaining resources: \nHard-disk: " + harddisk + "GB\nRam: " + ram + "GB");
+        System.out.println("\nRemaining resources: \nHard-disk: " + hard_disk + "GB\nRam: " + ram + "GB");
         
     }
 
     @Override
     public void update(float harddisk, float ram, LocalTime startTime) {
 
-        if(harddisk > this.harddisk){harddisk = this.harddisk;}
+        if(harddisk > this.hard_disk){harddisk = this.hard_disk;}
         if(ram > this.ram){ram = this.ram;}
         
-        this.harddisk -= harddisk;
+        this.hard_disk -= harddisk;
         this.ram -= ram;
         
         display();
